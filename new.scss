@@ -1,0 +1,212 @@
+
+$web-font1: 'Satoshi', sans-serif;
+$web-font2:'General Sans', sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    font-family: $web-font1,$web-font2;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+//the div with the background image
+.image-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .5;
+    }
+
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.weather-container{
+    padding: 5rem;
+    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .search-container{
+        display: flex;
+        align-items: center;
+
+        //input 
+        .search{
+            background-color: white;
+            border: 1px solid black;
+            border: none;
+            border-radius: .4rem;
+            font-size: 1.8rem;
+            color: black;
+            font-weight: bold;
+            padding: 1rem .8rem;
+            background-color: rgb(211, 207, 207);
+            width: 100%;
+
+        }
+
+        //search icon
+        #searchBtn{
+            font-size: 2rem;
+            border: 1px solid rgb(11, 0, 0);
+            padding: 1.1rem;
+            background-color: rgb(194, 188, 188);
+            color: black;
+            border-radius: .4rem;
+            margin-left: -1.3rem;
+            cursor: pointer;
+            color: black;
+            border-radius: 43%;
+        }
+    }
+
+
+    //showing weather type
+    .title{
+        font-size: 4rem;
+        padding: 1rem 0;
+        padding-top: 4rem;
+        text-transform: capitalize;
+        font-weight: 900;
+        // opacity: .9;
+
+        span{
+            color: white;
+            text-decoration: none;
+            position: relative;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 0.1rem;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+            }
+        }
+    }
+
+    //temperature
+    .weather-temperature{
+        font-size: 2.5rem;
+        opacity: .9;
+        font-weight: 700;
+    }
+
+    //container with weather type and the weather icon
+    .weather-type-and-icon-container{
+        margin-left: -.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        //weather type
+        .weather-type{
+            opacity: .9;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            padding: 1rem 0;
+        }
+
+    }
+
+    .humidity{
+        padding-bottom: 1rem;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+        opacity: .9;
+    }
+
+    .wind-speed{
+        opacity: .9;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+
+
+
+
+}
+
+//hiding the container with the weather info as the page loads
+.weather-conditions-container{
+    display: none;  
+}
+
+
+
+@media screen and (max-width:500px) {
+    .weather-container{
+        padding:3rem;
+
+        .title{
+            font-size: 3rem;
+        }
+
+        .weather-type-and-icon-container{
+            .weather-type{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .weather-container{
+        padding:2.5rem;
+
+        .weather-temperature{
+            font-size: 1.8rem;
+        }
+
+        .title{
+            font-size: 2.3rem;
+        }
+
+        .weather-type-and-icon-container{
+            .weather-type{
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+}

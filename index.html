@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="new.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80f7a4397b.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="image-container">
+        <img class="bgImage" src="https://images.pexels.com/photos/7519948/pexels-photo-7519948.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+
+
+    <div class="weather-container">
+        <div class="search-container">
+            <input autofocus class="search" type="text" placeholder="search" >  <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+        <div class="weather-conditions-container"> 
+            <h1 class="title">weather in <span class="city"></sp></h1>
+            <h2 class="weather-temperature"><span class="weather-temperature-span"></span> <sup>o</sup>C</h2>
+
+            <div class="weather-type-and-icon-container">
+                <img class="iconImage" src="https://openweathermap.org/img/wn/04n.png" alt="weather icon">
+                <h2 class="weather-type"></h2>
+            </div>
+     
+            <h2 class="humidity"></h2>
+            <h2 class="wind-speed"></h2>
+        </div>
+        </div>
+
+    <script src="new.js"></script>
+    
+</body>
+</html>
