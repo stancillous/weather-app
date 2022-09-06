@@ -1,5 +1,5 @@
-# stancillous.github.io
+# weather application
 
-A simple weather app build with HTML, CSS, SASS and JAVASCRIPT
+A simple weather app build with vuejs
 
-![weatherapp](https://user-images.githubusercontent.com/99094257/177170394-c98915d9-2f41-4300-8344-5dd5dde16bd5.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/99094257/188737486-aeca38a6-19ec-48be-a118-5b97ff3275e7.png)
