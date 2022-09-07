@@ -1,5 +1,6 @@
 # weather application
 [weather app] (https://w-info.netlify.app/)
+weather [app](https://w-info.netlify.app/)
 
 A simple weather web app built with vuejs
 
